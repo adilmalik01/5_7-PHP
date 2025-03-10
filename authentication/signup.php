@@ -106,6 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
 
+<?php include("navbar.php") ?>
 
 
     <div class="main">

@@ -1,70 +1,38 @@
 <style>
-    /* Basic Reset */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    /* Body Styling */
-    body {
-        font-family: Arial, sans-serif;
-    }
-
-    /* Navbar Styling */
-    .navbar {
+    nav {
         display: flex;
-        justify-content: space-between;
+        justify-content: end;
         align-items: center;
-        background-color: #2d3e50;
-        padding: 10px 20px;
+        height: 8vh;
+        width: 100%;
+        background-color: lightblue;
     }
 
-    .navbar .logo a {
-        color: #fff;
-        font-size: 24px;
-        text-decoration: none;
-    }
-
-    .navbar .nav-links {
-        list-style-type: none;
+    .btn-div {
         display: flex;
+        justify-content: center;
+        padding: 0 10px;
+        align-items: center;
+        gap: 20px;
     }
 
-    .navbar .nav-links li {
-        margin-right: 20px;
-    }
-
-    .navbar .nav-links li a {
-        color: #fff;
+    .btn-div a {
+        width: 90px;
+        background-color: blueviolet;
+        color: white;
         text-decoration: none;
-        font-size: 16px;
-        transition: color 0.3s ease;
-    }
-
-    .navbar .nav-links li a:hover {
-        color: #00bcd4;
-    }
-
-    .navbar .cart a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 16px;
-        transition: color 0.3s ease;
-    }
-
-    .navbar .cart a:hover {
-        color: #00bcd4;
+        color: white;
+        padding: 8px 0;
+        border-radius: 4px;
+        text-align: center  ;
     }
 </style>
 
-<nav class="navbar">
-    <div class="logo">
-        <a href="#">Inventory Store</a>
+<nav>
+
+    <div class="btn-div">
+        <a href="./login.php">Login</a>
+        <a href="./signup.php">Signup</a>
     </div>
-    <ul class="nav-links">
-        <li><a href="./index.php">Home</a></li>
-        <li><a href="./index.php">Products</a></li>
-        <li><a href="./create-product.php">Add Products</a></li>
-    </ul>
+
 </nav>

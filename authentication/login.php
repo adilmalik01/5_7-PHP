@@ -1,5 +1,13 @@
 <?php
 
+session_start();
+
+
+if (isset($_SESSION["user_login"])) {
+    header("Location:index.php");
+}
+
+
 include("db.php");
 
 
@@ -17,7 +25,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $user  = $result->fetch_assoc();
         $validate = password_verify($password, hash: $user["password"]);
         if ($validate) {
-            echo "User Login";
+
+            $_SESSION["user_login"] = true;
+
+            header("Location:index.php");
         } else {
             echo "Invalid User";
         }
@@ -94,7 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
 
-
+    <?php include("navbar.php") ?>
 
     <div class="main">
         <form method="post" action="./login.php">
