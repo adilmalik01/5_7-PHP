@@ -27,6 +27,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($validate) {
 
             $_SESSION["user_login"] = true;
+            $_SESSION["user_email"] =  $user["email"];
+            $_SESSION["username"] =  $user["username"];
+
 
             header("Location:index.php");
         } else {
